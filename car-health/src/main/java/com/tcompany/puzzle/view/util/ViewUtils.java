@@ -10,6 +10,7 @@ public class ViewUtils {
 		char[] hyphens = new char[30];
 		Arrays.fill(hyphens, 0, 30, '-');
 		StringBuilder statisticsBuilder = new StringBuilder();
+		statisticsBuilder.append("\n");
 		statisticsBuilder.append(String.format("%-30s", articleName));
 		statisticsBuilder.append("\n");
 		statisticsBuilder.append(hyphens);
@@ -26,6 +27,7 @@ public class ViewUtils {
 		char[] hyphens = new char[30];
 		Arrays.fill(hyphens, 0, 30, '-');
 		StringBuilder statisticsBuilder = new StringBuilder();
+		statisticsBuilder.append("\n");
 		if (isBroken(engineHealth, transMissionHealth, brakeHealth)) {
 			statisticsBuilder.append("Car Health: " + String.format("%18s", "BROKEN"));
 		} else {
