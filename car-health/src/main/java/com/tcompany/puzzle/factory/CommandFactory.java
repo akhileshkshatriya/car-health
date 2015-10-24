@@ -5,6 +5,7 @@ import com.tcompany.puzzle.command.CarReceiver;
 import com.tcompany.puzzle.command.GetBrakeHealthCommand;
 import com.tcompany.puzzle.command.GetEngineHealthCommand;
 import com.tcompany.puzzle.command.GetTransmissionHealthCommand;
+import com.tcompany.puzzle.factory.enm.Commands;
 
 public class CommandFactory {
 
@@ -25,18 +26,16 @@ public class CommandFactory {
 		return factory;
 	}
 
-	public Command getCommand(String commandName) {
-		if (ENGINE.equals(commandName)) {
+	public Command getCommand(Commands commands) {
+		switch (commands) {
+		case ENGINE:
 			return engineHealthCommand;
-		}
-
-		if (TRANSMISSION.equals(commandName)) {
+		case TRANSMISSION:
 			return transmissionHealthCommand;
-		}
-		if (BRAKE.equals(commandName)) {
+		case BRAKE:
 			return breakHealthCommand;
+		default:
+			return null;
 		}
-
-		return null;
 	}
 }

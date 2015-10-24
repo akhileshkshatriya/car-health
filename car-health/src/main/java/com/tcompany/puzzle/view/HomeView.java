@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.tcompany.puzzle.api.BaseView;
 import com.tcompany.puzzle.factory.ViewFactory;
+import com.tcompany.puzzle.factory.enm.Views;
 import com.tcompany.puzzle.view.lambda.HomeViewLambda;
 
 public class HomeView implements BaseView {
@@ -22,19 +23,19 @@ public class HomeView implements BaseView {
 			userInput = Character.toUpperCase(userInput);
 			switch (userInput) {
 			case 'E':
-				ViewFactory.getInstance().getView(ViewFactory.ENGINE).display();
+				ViewFactory.getInstance().getView(Views.ENGINE).display();
 				displayOptions();
 				break;
 			case 'T':
-				ViewFactory.getInstance().getView(ViewFactory.TRANSMISSION).display();
+				ViewFactory.getInstance().getView(Views.TRANSMISSION).display();
 				displayOptions();
 				break;
 			case 'B':
-				ViewFactory.getInstance().getView(ViewFactory.BRAKE).display();
+				ViewFactory.getInstance().getView(Views.BRAKE).display();
 				displayOptions();
 				break;
 			case 'O':
-				ViewFactory.getInstance().getView(ViewFactory.OVERALL).display();
+				ViewFactory.getInstance().getView(Views.OVERALL).display();
 				displayOptions();
 				break;
 			case 'X':
