@@ -9,10 +9,6 @@ import com.tcompany.puzzle.factory.enm.Commands;
 
 public class CommandFactory {
 
-	public static final String ENGINE = "engine";
-	public static final String TRANSMISSION = "transmission";
-	public static final String BRAKE = "brake";
-
 	private static CommandFactory factory = new CommandFactory();
 
 	private CarReceiver receiver = new CarReceiver();
